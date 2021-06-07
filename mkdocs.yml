@@ -1,0 +1,10 @@
+site_name: napari-nucleaizer
+site_description: Napari integration of the nucleaizer algorithm. (https://nucleaizer.org)
+site_author: Ervin Tasnadi
+
+theme: readthedocs
+
+repo_url: https://github.com/etasnadi/napari-nucleaizer
+
+pages:
+- Home: index.md

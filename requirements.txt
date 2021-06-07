@@ -1,0 +1,7 @@
+# These are the default deps, don't remove!
+napari-plugin-engine>=0.1.4
+numpy
+# <--- default
+
+scikit-image
+nucleaizer_backend
