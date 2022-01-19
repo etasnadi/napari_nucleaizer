@@ -1046,11 +1046,12 @@ class Nucleaizer(QWidget):
 
     def freeze(self):
         #self.btn_predict.setEnabled(False)
-        self.start_training_button.setEnabled(False)
+        #self.start_training_button.setEnabled(False)
+        pass
 
     def unfreeze(self):
         self.btn_predict.setEnabled(True)
-        self.start_training_button.setEnabled(True)
+        #self.start_training_button.setEnabled(True)
 
     def initialize_model(self):
         sel = self.models_list_widget.selectedIndexes()
