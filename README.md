@@ -21,10 +21,9 @@ https://napari.org/docs/plugins/index.html
 -->
 
 ## Installation
-1. Create & enable a virtual env.
-2. Instal napari.
-3. Install `nucleaizer_backend`.
-4. Install this project into the same virtual environment.
+
+1. Install [Napari](https://napari.org/tutorials/fundamentals/installation)
+2. Search for `napari-nucleaizer` in the `Plugins > Install/Uninstall Plugins...` popup.
 
 ## Contributing
 

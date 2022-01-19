@@ -18,7 +18,8 @@ if TYPE_CHECKING:
 
 # This is the actual plugin function, where we export our function
 # (The functions themselves are defined below)
-@napari_hook_implementation
+
+#@napari_hook_implementation
 def napari_experimental_provide_function():
     # we can return a single function
     # or a tuple of (function, magicgui_options)
@@ -30,7 +31,6 @@ def napari_experimental_provide_function():
 def threshold(data: "ImageData", threshold: int) -> "LabelsData":
     """Threshold an image and return a mask."""
     return (data > threshold).astype(int)
-
 
 # 2. Second example, a function that adds, subtracts, multiplies, or divides two layers
 

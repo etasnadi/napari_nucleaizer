@@ -10,6 +10,7 @@ import math
 import os
 from pathlib import Path
 import time
+import platform
 
 import numpy as np
 import imageio
@@ -166,7 +167,7 @@ class Nucleaizer(QWidget):
         inference_gb_layout = QVBoxLayout()
         inference_gb.setLayout(inference_gb_layout)
 
-        training_gb = QGroupBox("Training [will be enabled soon.]")
+        training_gb = QGroupBox("Training")
         training_gb_layout = QVBoxLayout()
         training_gb.setLayout(training_gb_layout)
 
@@ -174,7 +175,14 @@ class Nucleaizer(QWidget):
 
         nucleaizer_layout = QVBoxLayout()
         nucleaizer_layout.addWidget(inference_gb)
-        nucleaizer_layout.addWidget(training_gb)
+
+        if platform.system() == 'Linux':
+            #nucleaizer_layout.addWidget(training_gb)
+            nucleaizer_layout.addWidget(QLabel("Training will be enabled soon."))
+
+        else:
+            nucleaizer_layout.addWidget(QLabel("Training will only be supported on Linux systems."))
+        
         nucleaizer_widget.setLayout(nucleaizer_layout)
         
         scroll = QScrollArea()
@@ -403,8 +411,8 @@ class Nucleaizer(QWidget):
         self.select_prject_button = QPushButton("Open pro&ject...")
         self.new_project_button = QPushButton("&New project...")
 
-        self.select_prject_button.setEnabled(False)
-        self.new_project_button.setEnabled(False)
+        #self.select_prject_button.setEnabled(False)
+        #self.new_project_button.setEnabled(False)
 
         training_gb_layout.addWidget(self.select_prject_button)
         training_gb_layout.addWidget(self.new_project_button)
@@ -1076,8 +1084,8 @@ class Nucleaizer(QWidget):
         if not init_success:
             return False
         
-        if self.viewer.active_layer is not None:
-            image = self.viewer.active_layer.data
+        if self.viewer.layers.selection.active is not None:
+            image = self.viewer.layers.selection.active.data
         else:
             msg = QMessageBox()
             msg.setText("Select a layer that contains an image first!")
