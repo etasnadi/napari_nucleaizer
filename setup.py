@@ -41,7 +41,7 @@ setup(
     packages=find_packages(),
     python_requires='>=3.6',
     install_requires=requirements,
-    version='0.1.9',
+    version='0.1.10',
     setup_requires=['setuptools_scm'],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
