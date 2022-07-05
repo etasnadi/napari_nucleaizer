@@ -75,4 +75,4 @@ https://napari.org/docs/plugins/index.html
 
 ## Further help
 
-See the [documentation]()
+See the [documentation](https://napari-nucleaizer-docs.readthedocs.io/en/latest/index.html)
