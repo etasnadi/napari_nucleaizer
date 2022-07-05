@@ -1,7 +1,15 @@
 # These are the default deps, don't remove!
-napari-plugin-engine>=0.1.4
+napari
 numpy
+qtpy
+PyQt5
+#qtbot
+#pytest-qt
 # <--- default
 
 scikit-image
-nucleaizer_backend
+imageio
+#nucleaizer_backend
+jsonpickle
+#napari
+git+https://github.com/etasnadi/nucleaizer_backend/#egg=nucleaizer_backend

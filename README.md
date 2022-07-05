@@ -1,16 +1,54 @@
-# napari-nucleaizer
+# napari_nucleaizer
 
 [![License](https://img.shields.io/pypi/l/napari-nucleaizer.svg?color=green)](https://github.com/etasnadi/napari-nucleaizer/raw/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/napari-nucleaizer.svg?color=green)](https://pypi.org/project/napari-nucleaizer)
+[![Python package](https://github.com/etasnadi/napari_nucleaizer/actions/workflows/test_and_deploy.yml/badge.svg)](https://github.com/etasnadi/napari_nucleaizer/actions/workflows/test_and_deploy.yml)
+[![codecov](https://codecov.io/gh/etasnadi/napari_nucleaizer/branch/master/graph/badge.svg?token=5XC36PA6OQ)](https://codecov.io/gh/etasnadi/napari_nucleaizer)
+[![Documentation Status](https://readthedocs.org/projects/napari-nucleaizer-docs/badge/?version=latest)](https://napari-nucleaizer-docs.readthedocs.io/en/latest/?badge=latest)
+
+<!--
 [![Python Version](https://img.shields.io/pypi/pyversions/napari-nucleaizer.svg?color=green)](https://python.org)
-[![tests](https://github.com/etasnadi/napari-nucleaizer/workflows/tests/badge.svg)](https://github.com/etasnadi/napari-nucleaizer/actions)
+[![tests](https://github.com/etasnadi/napari_nucleaizer/workflows/tests/badge.svg)](https://github.com/etasnadi/napari-nucleaizer/actions)
 [![codecov](https://codecov.io/gh/etasnadi/napari-nucleaizer/branch/master/graph/badge.svg)](https://codecov.io/gh/etasnadi/napari-nucleaizer)
+-->
 
 GUI for the nucleaAIzer method in Napari.
 
-----------------------------------
+![Plugin interface in napari.](napari_nucleaizer.png)
 
-This [napari] plugin was generated with [Cookiecutter] using with [@napari]'s [cookiecutter-napari-plugin] template.
+## Overview
+
+This is a napari plugin to execute the nucleaizer nuclei segmentation algorithm.
+
+### Main functionalities
+
+Using this plugin will be able to
+
+1. Load your image into Napar, then outline the nuclei.
+2. Specify an image folder containing lots of images and an output folder, and automatically segment all of the images in the input folder.
+3. If you are not satisfied with the results, you can train your own model:
+    1. You can use our pretrained models and fine tune them on your data.
+    2. You can skip the nucleaizer pipeline and train only on your data.
+
+
+### Supported image types
+
+We have several pretrained models for the following image modelities:
+* fluorescent microscopy images
+* IHC stained images
+* brightfield microscopy images,
+
+among others. For the detailed descriptions of our models, see: https://zenodo.org/record/6790845.
+
+### How it works?
+
+For the description of the algorithm, see our paper: "Hollandi et al.: nucleAIzer: A Parameter-free Deep Learning Framework for Nucleus Segmentation Using Image Style Transfer, Cell Systems, 2020. https://doi.org/10.1016/j.cels.2020.04.003"
+
+The original code (https://github.com/spreka/biomagdsb) is partially transformed into a python package (nucleaizer_backend) to actually perform the operations. See the project page of the backend at: https://github.com/etasnadi/nucleaizer_backend.
+
+If you wish to use the web interface, check: http://nucleaizer.org.
+
+![All functionalities.](nucleaizer_screenshot.png)
 
 <!--
 Don't miss the full getting started guide to set up your new package:
@@ -20,37 +58,21 @@ and review the napari docs for plugin developers:
 https://napari.org/docs/plugins/index.html
 -->
 
-## Installation
+## Install
 
-1. Install [Napari](https://napari.org/tutorials/fundamentals/installation)
-2. Search for `napari-nucleaizer` in the `Plugins > Install/Uninstall Plugins...` popup.
+1. Create an environment (recommended).
 
-## Contributing
+2. Install napari: `pip install "napari[pyqt5]"`. Other methods: https://napari.org/tutorials/fundamentals/installation.html
 
-Contributions are very welcome. Tests can be run with [tox], please ensure
-the coverage at least stays the same before you submit a pull request.
+3. Clone this project and use `pythhon3 -m pip install -e <path>` to install the project locally **into the same evnrionment as napari**.
 
-## License
+## Run
 
-Distributed under the terms of the [BSD-3] license,
-"napari-nucleaizer" is free and open source software
+1. Start napari by calling `napari`.
+2. Then, activate the plugin in the `Plugins` menu.
 
-## Issues
+![Plugin interface in napari.](napari_plugin_launch.png)
 
-If you encounter any problems, please [file an issue] along with a detailed description.
+## Further help
 
-[napari]: https://github.com/napari/napari
-[Cookiecutter]: https://github.com/audreyr/cookiecutter
-[@napari]: https://github.com/napari
-[MIT]: http://opensource.org/licenses/MIT
-[BSD-3]: http://opensource.org/licenses/BSD-3-Clause
-[GNU GPL v3.0]: http://www.gnu.org/licenses/gpl-3.0.txt
-[GNU LGPL v3.0]: http://www.gnu.org/licenses/lgpl-3.0.txt
-[Apache Software License 2.0]: http://www.apache.org/licenses/LICENSE-2.0
-[Mozilla Public License 2.0]: https://www.mozilla.org/media/MPL/2.0/index.txt
-[cookiecutter-napari-plugin]: https://github.com/napari/cookiecutter-napari-plugin
-[file an issue]: https://github.com/etasnadi/napari-nucleaizer/issues
-[napari]: https://github.com/napari/napari
-[tox]: https://tox.readthedocs.io/en/latest/
-[pip]: https://pypi.org/project/pip/
-[PyPI]: https://pypi.org/
+See the [documentation]()

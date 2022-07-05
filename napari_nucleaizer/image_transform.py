@@ -73,4 +73,4 @@ def rescale_mask(mask, scale_factor):
     return rescale(mask, scale_factor, order=0, anti_aliasing=False, preserve_range=True)
 
 def rescale_image(image, scale_factor):
-    return rescale(image, scale_factor, anti_aliasing=True, preserve_range=True, multichannel=True).astype(np.uint8)
+    return rescale(image, scale_factor, anti_aliasing=True, preserve_range=True, channel_axis=2).astype(np.uint8)

@@ -1,0 +1,10 @@
+name: napari-nucleaizer
+display_name: Napari nucleAIzer plugin
+contributions: 
+  commands:
+    - id: napari-nucleaizer.launch
+      python_name: napari_nucleaizer.nucleaizer_widget:Nucleaizer
+      title: Launch nucleAIzer widget
+  widgets:
+    - command: napari-nucleaizer.launch
+      display_name: Nuclei segmentation and training
