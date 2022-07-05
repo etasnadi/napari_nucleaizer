@@ -71,7 +71,7 @@ https://napari.org/docs/plugins/index.html
 1. Start napari by calling `napari`.
 2. Then, activate the plugin in the `Plugins` menu.
 
-![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/nucleaizer_screenshot.png?raw=true)
+![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/napari_plugin_launch.png?raw=true)
 
 ## Further help
 
