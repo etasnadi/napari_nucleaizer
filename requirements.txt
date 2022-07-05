@@ -11,5 +11,5 @@ scikit-image
 imageio
 #nucleaizer_backend
 jsonpickle
-#napari
-git+https://github.com/etasnadi/nucleaizer_backend/#egg=nucleaizer_backend
+napari
+git+https://github.com/etasnadi/nucleaizer_backend/@main#egg=nucleaizer_backend
