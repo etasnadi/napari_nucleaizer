@@ -14,7 +14,7 @@
 
 GUI for the nucleaAIzer method in Napari.
 
-![Plugin interface in napari.](napari_nucleaizer.png)
+![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/napari_nucleaizer.png?raw=true)
 
 ## Overview
 
@@ -71,7 +71,7 @@ https://napari.org/docs/plugins/index.html
 1. Start napari by calling `napari`.
 2. Then, activate the plugin in the `Plugins` menu.
 
-![Plugin interface in napari.](napari_plugin_launch.png)
+![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/nucleaizer_screenshot.png?raw=true)
 
 ## Further help
 

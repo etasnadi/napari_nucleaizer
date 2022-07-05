@@ -1,0 +1,13 @@
+labels:
+  ontology: EDAM-BIOIMAGING:alpha06
+  terms:
+  - 2D Image # Data Shape
+  - Cell image analysis
+  - Fluorescence Microscopy # Imaging Modality
+  - Tissue image analysis
+  - Bright-field microscopy
+  - Instance segmentation # Processing step
+  - Deep learning
+  - Convolutional neural network
+  - Supervised learning
+  - R-CNN
