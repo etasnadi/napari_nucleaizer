@@ -14,7 +14,7 @@
 
 GUI for the nucleaAIzer method in Napari.
 
-![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/napari_nucleaizer.png?raw=true)
+![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/napari_screenshot.png?raw=true)
 
 ## Overview
 
@@ -64,15 +64,25 @@ https://napari.org/docs/plugins/index.html
 
 2. Install napari: `pip install "napari[pyqt5]"`. Other methods: https://napari.org/tutorials/fundamentals/installation.html
 
-3. Clone this project and use `pythhon3 -m pip install -e <path>` to install the project locally **into the same evnrionment as napari**.
+3. Install the plugin into napari:
 
+    * User mode from PyPI: start Napari (command line: `napari`) and select he **Install/Uninstall Plugins...** under the **Plugins** menu. In the popup, filter for `napari-nucleaizer`.
+
+    * Developer mode: clone this project and use `pythhon3 -m pip install -e <path>` to install the project locally **into the same evnrionment as napari**. It has the advantage that you will have the latest version.
 ## Run
 
-1. Start napari by calling `napari`.
-2. Then, activate the plugin in the `Plugins` menu.
-
+1. Start Napari by calling `napari` from the command line.
+2. Then, activate the plugin in the `Plugins` menu. If you successfully installed the plugin, you have to see something like this:
 ![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/napari_plugin_launch.png?raw=true)
 
 ## Further help
 
-See the [documentation](https://napari-nucleaizer-docs.readthedocs.io/en/latest/index.html)
+See the [documentation](https://napari-nucleaizer-docs.readthedocs.io/en/latest/index.html) (work in progress).
+
+## Issues
+
+Use the github issue tracker if you experinece unexpected behaviour.
+
+## Contact
+
+You can contact me in [e-mail](mailto:tasnadi.ervin@MY-INSTITUTE) where MY-INSTITUTE is `brc.hu`.

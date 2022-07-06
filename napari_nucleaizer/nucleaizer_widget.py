@@ -9,7 +9,7 @@ import napari
 from skimage.measure import regionprops_table
 from qtpy.QtCore import Slot, Qt
 from qtpy.QtGui import QImage, QPixmap, QShowEvent
-from qtpy.QtWidgets import (QTabWidget, QCheckBox, QWidget, QVBoxLayout, QLabel, QGroupBox, QScrollArea, QProgressBar, QMenuBar, QMessageBox)
+from qtpy.QtWidgets import (QTabWidget, QSizePolicy, QCheckBox, QWidget, QVBoxLayout, QLabel, QGroupBox, QScrollArea, QProgressBar, QMenuBar, QMessageBox)
 
 from . import image_transform
 from . import common_stuff
@@ -77,7 +77,12 @@ class Nucleaizer(QWidget):
         nucleaizer_layout.addWidget(menu)
         nucleaizer_layout.addWidget(self.tab)
         nucleaizer_widget.setLayout(nucleaizer_layout)
-        
+        nucleaizer_widget.setMinimumWidth(400)
+
+        nucleaizer_widget.setSizePolicy(
+            QSizePolicy(
+                QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding))
+
         # Status bar
         self.progress_bar = QProgressBar(self)
         self.status_bar = QLabel()
@@ -86,11 +91,11 @@ class Nucleaizer(QWidget):
         # Container widget
         main_layout = QVBoxLayout()
         main_layout.addWidget(quick_view_gb)
-        main_layout.addWidget(nucleaizer_widget)
+        main_layout.addWidget(nucleaizer_widget)    
         main_layout.addWidget(self.progress_bar)
         main_layout.addWidget(self.status_bar)
         self.setLayout(main_layout)
-        self.setMinimumWidth(300)
+        #self.setMinimumWidth(300)
 
     def startup_message(self):
         settings = self.load_settings()

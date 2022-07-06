@@ -1,5 +1,6 @@
 from pathlib import Path
 import copy
+import pathlib
 import imageio
 
 from napari.qt.threading import thread_worker
@@ -32,7 +33,7 @@ class BatchPredictionWidget(QWidget):
 
         self.selected_input_dir = None
         self.selected_out_dir = None
-        self.default_dir = '/home/ervin/nucleaizer_dataset'
+        self.default_dir = Path.home()
 
         self.batch_predict_layout = QVBoxLayout()
         self.setLayout(self.batch_predict_layout)
@@ -86,8 +87,10 @@ class BatchPredictionWidget(QWidget):
             if ext in self.IMAGE_PREDITC_EXTENSIONS:
                 item = QListWidgetItem(common_stuff.strip_text("%s" % file.name))
                 item.setIcon(QIcon(str(file)))
-                item.setData(Qt.UserRole, file)    
+                item.setData(Qt.UserRole, file)
+                item.setToolTip(file.name)
                 self.input_images_list_widget.addItem(item)
+
 
     def batch_mark_completed_files(self):
         normal_font = QFont()
@@ -336,10 +339,9 @@ class PredictionWidget(QGroupBox):
 
         self.activate_batch_predict_btn = QPushButton("Batch prediction ...")
         self.activate_batch_predict_btn.clicked.connect(self.show_batch_predict_widget)
+        inference_gb_layout.addStretch()
         inference_gb_layout.addWidget(self.activate_batch_predict_btn)
-
         inference_gb_layout.addWidget(self.batch_predict_widget)
-
         self.btn_predict = QPushButton("P&redict curent image")
         self.btn_predict.clicked.connect(self.onClickPredict)
         inference_gb_layout.addWidget(self.btn_predict)
