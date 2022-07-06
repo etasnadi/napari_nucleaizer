@@ -38,7 +38,7 @@ We have several pretrained models for the following image modelities:
 * IHC stained images
 * brightfield microscopy images,
 
-among others. For the detailed descriptions of our models, see: https://zenodo.org/record/6790845.
+among others. For the detailed descriptions of our models, see: https://zenodo.org/record/6800341.
 
 ### How it works?
 
@@ -66,13 +66,14 @@ https://napari.org/docs/plugins/index.html
 
 3. Install the plugin into napari:
 
-    * User mode from PyPI: start Napari (command line: `napari`) and select he **Install/Uninstall Plugins...** under the **Plugins** menu. In the popup, filter for `napari-nucleaizer`.
+    * User mode from [PyPI](https://pypi.org/project/napari-nucleaizer/): start Napari (command line: `napari`) and select he **Install/Uninstall Plugins...** under the **Plugins** menu. In the popup, filter for `napari-nucleaizer`.
 
     * Developer mode: clone this project and use `pythhon3 -m pip install -e <path>` to install the project locally **into the same evnrionment as napari**. It has the advantage that you will have the latest version.
 ## Run
 
 1. Start Napari by calling `napari` from the command line.
 2. Then, activate the plugin in the `Plugins` menu. If you successfully installed the plugin, you have to see something like this:
+
 ![Plugin interface in napari.](https://github.com/etasnadi/napari_nucleaizer/blob/main/napari_plugin_launch.png?raw=true)
 
 ## Further help
