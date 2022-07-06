@@ -48,7 +48,7 @@ The original code (https://github.com/spreka/biomagdsb) is partially transformed
 
 If you wish to use the web interface, check: http://nucleaizer.org.
 
-![All functionalities.](nucleaizer_screenshot.png)
+![All functionalities.](https://github.com/etasnadi/napari_nucleaizer/blob/main/nucleaizer_screenshot.png?raw=true)
 
 <!--
 Don't miss the full getting started guide to set up your new package:

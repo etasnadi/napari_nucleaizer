@@ -33,9 +33,11 @@ class TrainingWidget(QGroupBox):
 
     project_file_name = '.project'
 
-    #default_dir = '/home/ervin/nucleaizer_demo_folder/nucleaizer_workflow'
-    default_dir = '/home/ervin/nucleaizer_demo_folder/nucleaizer_workflow_phase2'
-    default_dir_new_project = '/home/ervin/nucleaizer_demo_folder/nucleaizer_workflow_phase2'
+    #default_dir = '/home/ervin/nucleaizer_demo_folder/nucleaizer_workflow_phase2'
+    #default_dir_new_project = '/home/ervin/nucleaizer_demo_folder/nucleaizer_workflow_phase2'
+    
+    default_dir = '.'
+    default_dir_new_project = '.'
 
     set_task_started_status_signal = Signal(str)
     update_progress_bar_signal = Signal(int)
